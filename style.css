@@ -11,7 +11,7 @@
 body {
     background-color: #101010;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.7rem;
     line-height: 110%;
@@ -24,12 +24,12 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: 0.8px solid rgba(255, 255, 255, 0.10);
+    border-right: 0.8px solid rgba(255, 255, 255, 0.1);
 }
 
 #logo {
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 #logo:hover {
@@ -48,19 +48,18 @@ ul {
     flex-direction: column;
     gap: 1.6rem;
 }
+
 li {
     display: flex;
     align-items: center;
     gap: 1.2rem;
     cursor: pointer;
-    transition: .9s all ease-in-out;
+    transition: 0.9s all ease-in-out;
     padding: 1rem;
-
-    
-
 }
 
-li:hover, .more:hover {
+li:hover,
+.more:hover {
     background-color: black;
     border-radius: 1.5rem;
 }
@@ -70,10 +69,6 @@ li:hover, .more:hover {
     gap: 1.2rem;
     align-items: center;
     cursor: pointer;
-    transition: .9s all ease-in-out;
+    transition: 0.9s all ease-in-out;
     padding: 1rem;
-
 }
-
-
-
