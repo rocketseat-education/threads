@@ -9,12 +9,14 @@
 }
 
 body {
+    display: flex;
     background-color: #101010;
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.7rem;
     line-height: 110%;
+    gap: 12rem;
 }
 
 aside {
@@ -43,7 +45,7 @@ aside {
 }
 
 ul {
-    list-style: none;
+    /* list-style: none; */
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -71,4 +73,138 @@ li:hover,
     cursor: pointer;
     transition: 0.9s all ease-in-out;
     padding: 1rem;
+}
+
+main,
+.suggestions {
+    display: flex;
+    width: 112rem;
+    margin: 10rem 20rem;
+}
+
+.suggestions {
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10.3rem;
+}
+
+.profile span {
+    color: #3E95EF;
+    font-weight: 700;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-container img {
+    margin-right: 1.2rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.name {
+    opacity: 0.6;
+}
+
+.suggestions-fy {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-suggestions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+    align-items: center;
+}
+
+.title-suggestions p:first-child {
+    opacity: 0.60;
+}
+
+.suggestions-fy ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.suggestions-fy li {
+    display: flex;
+    gap: 5.4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 1.6rem;
+}
+
+.suggestions-fy li button {
+    background-color: transparent;
+    color: #616161;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #323232;
+}
+
+.suggestions-fy li p:last-child {
+    opacity: 0.60;
+}
+
+.user-info {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.suggestions-fy ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.threads-app {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.threads-app span {
+    opacity: 0.60;
+}
+
+.threads-app img {
+    width: 121px;
+    height: 122px;
+}
+
+.about ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about li {
+    position: relative;
+}
+
+#about li::before {
+    content: "•";
+    position: absolute;
+    color: #f1f1f1;
+    top: 25%;
+    right: 100%;
+    transform: translate(-50% -50%);
+}
+
+.copyright {
+    margin-top: 1rem;
 }
