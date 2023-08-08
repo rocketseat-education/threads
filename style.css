@@ -17,6 +17,7 @@ body {
     font-size: 1.7rem;
     line-height: 110%;
     gap: 12rem;
+    overflow: hidden;
 }
 
 aside {
@@ -78,13 +79,13 @@ li:hover,
 main,
 .suggestions {
     display: flex;
-    width: 112rem;
     margin: 10rem 0;
 }
 
 .suggestions {
     flex-direction: column;
     gap: 4rem;
+    width: 400px;
 }
 
 .profile {
@@ -102,6 +103,11 @@ main,
 .profile-container {
     display: flex;
     align-items: center;
+}
+
+.profile-container div p,
+.profile span {
+    font-size: 1.5rem;
 }
 
 .profile-container img {
@@ -164,6 +170,11 @@ main,
     gap: 1.2rem;
 }
 
+.user-info p,
+.title-suggestions p {
+    font-size: 1.5rem;
+}
+
 .suggestions-fy ul li img {
     width: 30px;
     height: 30px;
@@ -190,10 +201,14 @@ main,
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 .about li {
     position: relative;
+    font-size: 1.3rem;
+    opacity: 0.6;
+    cursor: pointer;
 }
 
 #about li::before {
@@ -210,22 +225,25 @@ main,
 }
 
 main {
+    overflow-y: scroll;
     padding: 1.8rem 3rem;
-    width: 65.7rem;
+    flex-direction: column;
+    height: 100vh;
 }
 
 
-#input-area {  
+#input-area {
     display: grid;
     width: 519px;
     height: 115px;
     grid-template-areas: 'A B E E E E E E E E G'
-                         'A C C C C C C C C C G'
-                         'A D H H H H H H H F F';
+        'A C C C C C C C C C G'
+        'A D H H H H H H H F F';
     gap: 1rem;
-  }
- 
- 
+    border-bottom: 0.6px solid #232333;
+}
+
+
 #input-area img:nth-child(1) {
     width: 3.8rem;
     height: 3.8rem;
@@ -267,14 +285,102 @@ main {
 
 .attach {
     border: none;
-    grid-area: D; 
+    grid-area: D;
 }
 
 .answer {
     color: #5F5F5F;
     text-align: right;
     font-size: 1.3rem;
-    grid-area: F; 
+    grid-area: F;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20rem;
+}
 
+.tweet {
+    display: flex;
+    max-width: 519px;
+    gap: 0.8rem;
+    border-bottom: 0.6px solid #232333;
+    padding: 2rem 0;
+}
+
+.thread {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.thread div {
+    width: 1px;
+    background-color: #343638;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.thread-data,
+.info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: space-between;
+}
+
+.info span:first-child {
+    color: #606060;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.text img {
+    width: 470px;
+}
+
+.text p {
+    font-size: 1.6rem;
+}
+
+.interactions span {
+    color: #616161;
+}
+
+.tweet:last-child {
+    border: none;
+    margin-bottom: 10rem;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #343638 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #343638;
+    border-radius: 10px;
+    border: none;
+}
