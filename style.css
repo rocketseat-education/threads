@@ -219,9 +219,10 @@ main {
     display: grid;
     width: 519px;
     height: 115px;
-    grid-template-areas: 'A B E E E G'
-                         'A C C C C G'
-                         'A D H H F F';
+    grid-template-areas: 'A B E E E E E E E E G'
+                         'A C C C C C C C C C G'
+                         'A D H H H H H H H F F';
+    gap: 1rem;
   }
  
  
