@@ -217,42 +217,19 @@ main {
 
 #input-area {  
     display: grid;
-    grid-template-columns: 0.25fr 1fr 0.5fr 0.25fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "A B D E"
-    "A B C E"
-    "F G H H";
+    width: 519px;
+    height: 115px;
+    grid-template-areas: 'A B E E E G'
+                         'A C C C C G'
+                         'A D H H F F';
   }
-  
-
-.B { grid-area: B; }
-
-.D { grid-area: D; }
-
-.C { grid-area: C; }
-
-.E { grid-area: E; }
-
-.H { grid-area: H; }
-
-.A { grid-area: A; }
-
-.F { grid-area: F; }
-
-.G { grid-area: G; }
-  
  
-#input-area img {
+ 
+#input-area img:nth-child(1) {
     width: 3.8rem;
     height: 3.8rem;
     border: .5px solid white;
     border-radius: 50%;
-}
-
-#input-area div:nth-child(1) {
     grid-area: A;
 }
 
@@ -262,31 +239,6 @@ main {
     font-weight: 600;
     grid-area: B;
 }
-
-#input-area div:nth-child(3) {
-    width: 6.2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-#input-area img:nth-child(1) {
-    border: none;
-    grid-area: B; 
-}
-
-#input-content {
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#input-content div {
-    display: flex;
-    flex-direction: column;
-}
-
-
 
 #input-area textarea {
     background-color: transparent;
@@ -301,8 +253,6 @@ main {
 
 }
 
-
-
 .publish {
     background-color: transparent;
     border: none;
@@ -310,14 +260,20 @@ main {
     font-size: 1.4rem;
     font-weight: 600;
     cursor: pointer;
-    grid-area: E;
+    grid-area: G;
+    text-align: right;
+}
+
+.attach {
+    border: none;
+    grid-area: D; 
 }
 
 .answer {
-    grid-area: H;
     color: #5F5F5F;
     text-align: right;
     font-size: 1.3rem;
+    grid-area: F; 
 }
 
 
